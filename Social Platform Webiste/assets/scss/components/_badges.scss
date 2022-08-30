@@ -1,0 +1,28 @@
+@use "../abstract/mixin" as mix;
+@import "../abstract/function";
+
+.badge{
+    padding:0px 10px;
+    background-color:getcolor("hover-color");
+    color:#fff;
+    border-radius: 10px;
+    text-align:center;
+    @include mix.responsive(xs)
+    {
+      font-size: 1.2rem;
+      padding:0.4rem;
+    }
+    @include mix.responsive(sd)
+    {
+      font-size: 1rem;
+      padding:0.4rem;
+    }
+    @include mix.responsive(sd)
+    {
+      font-size:2rem;
+    }
+
+}
+.fa-solid{
+    margin-right:0.5rem;
+}

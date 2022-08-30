@@ -1,0 +1,26 @@
+@use "../abstract/mixin" as mix;
+@import "../abstract/variable";
+@import "../abstract/function";
+//header btn
+.btn{
+    padding:0.6em 1em;
+    line-height: 1;
+    font-size:0.9rem;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    display:inline-block; 
+    cursor: pointer;
+    
+}
+.primary-btn{
+    @extend .btn;
+    background-color:getcolor("main-color");
+    color:cornsilk;
+
+&:hover{
+   background-color:getcolor("hover-color");
+}
+}
+//    hero area button

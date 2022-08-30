@@ -1,0 +1,57 @@
+@use "../abstract/mixin" as mix;
+@import "../abstract/variable";
+@import "../abstract/function";
+footer{
+    background-color:getcolor("main-color");
+    padding:2rem 0rem;
+    text-align: center;
+    color:#fff;
+    @include mix.responsive(xs)
+    {
+        
+        
+    
+        
+    }
+    h4{
+        padding:0.3rem;
+        font-size: 1.4rem;
+        @include mix.responsive(xs){
+            font-size: 1.2rem;
+          } 
+          @include mix.responsive(sd){
+            font-size: 1.2rem;
+          }
+    }
+    p{
+        color: #e8e8e8;
+        padding:0.5rem;
+        margin-top: 1rem;
+        font-size: 0.8rem;
+    }
+    a{
+        color:#fff;
+        
+    &:hover{
+         
+    text-shadow: 2px 2px 10px #000;    
+    }
+    }
+    
+}
+.icons >a >i{
+    font-size:1.5rem;
+    padding:0 10px;
+    transition: 500ms;
+    color:blue;
+    &:hover{
+        color:rgb(224,224,224);
+    } 
+}
+.legal{
+  margin-top:0.5rem;
+  font-size:0.9rem;
+}
+.icons{
+    margin-top:1rem;
+}

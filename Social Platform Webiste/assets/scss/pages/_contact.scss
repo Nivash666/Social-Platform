@@ -1,0 +1,138 @@
+@use "../abstract/mixin" as mix;
+@import "../abstract/function";
+.contact{
+    padding:8rem 10rem;
+    
+   background-color:rgb(224,224,224);
+   @include mix.responsive(xs)
+   {
+      padding:4rem 2rem;
+   
+   
+   }
+   @include mix.responsive(sd)
+   {
+      padding:4rem 2rem;
+   
+   }
+   @include mix.responsive(lg)
+   {
+      padding:8rem 4rem;
+   
+   }
+&-box{
+   display:flex;
+   justify-content: space-between;
+   background-color: #fff;
+   align-items: center;
+   padding:2rem 3rem;
+   border-radius:0.5rem;
+   @include mix.responsive(xs)
+   {
+      flex-direction: column;
+      padding:2rem;
+      align-items: initial;
+   }  
+   @include mix.responsive(sd)
+   {
+      flex-direction: column;
+      padding:2rem;
+      align-items: initial;
+   }  
+   @include mix.responsive(lg)
+   {
+      flex-direction:row;
+      align-items: initial;
+   }
+   
+   h4{
+     font-size: 1.2rem;
+     padding:10px;
+  }
+
+  p{
+     padding:10px;
+     color: gray;
+     @include mix.responsive(xs){
+      font-size: 0.9rem;
+    }
+  }
+
+}
+
+}
+.contact-img{
+   img{
+
+   width:30rem;
+   height:30rem;
+   @include mix.responsive(xs)
+   {
+      max-width:10rem;
+      height:10rem;
+   }
+   @include mix.responsive(xlg)
+   {
+      max-width:30rem;
+      height:30rem;
+   }
+   }
+}
+.textbox{
+   width:100%;
+   background-color:rgb(247,247,247);
+   padding:0.8rem 1.5rem;
+   border-radius:5px;
+   border:3px solid rgb(247,247,247);;
+  outline: none;
+  margin:1rem 0rem;
+
+
+  &:focus
+  {
+     border:2px solid getcolor("main-color");
+  } 
+
+}
+.msg-box{
+   width:100%;
+   background-color:rgb(247,247,247);
+   padding:0.8rem 1.5rem;
+   border-radius: 5px;
+   border:none;
+  outline: none;
+  margin:10px 0rem;
+  &:focus{
+     border:2px solid getcolor("main-color");
+  } 
+
+   
+}
+.contact-btn{
+padding:3px;
+width:5rem;
+color: #eee;
+background-color:getcolor("hover-color");
+}
+.contact-header{
+   margin-bottom:2rem;
+}
+.contact-box-contents{
+   flex-grow:1;
+   
+}
+.resize-none{
+   resize: none;
+}
+
+
+img{
+   @include mix.responsive(xs)
+   {
+      width:20rem;
+   }  
+   @include mix.responsive(lg)
+   {
+      width:50rem;
+   }
+}

@@ -1,0 +1,178 @@
+@use "../abstract/mixin" as mix;
+@import"../abstract/variable";
+@import"../abstract/function";
+.hero-area{
+    display:flex;
+    justify-content: space-around;
+    padding:4rem 10rem;
+    align-items:center;
+    @include mix.responsive(xs)
+    {
+        padding:4rem 2rem;
+        flex-direction: column;
+        
+    }
+    @include mix.responsive(sd)
+    {
+        padding:4rem 2rem;
+        flex-direction: column;
+        
+    }
+    @include mix.responsive(lg)
+    {
+        padding: 4rem 6rem;
+        flex-direction: row;
+    }
+    @include mix.responsive(xlg)
+{
+    padding:4rem 8rem;
+    
+}
+}
+.hero-area--maintext{
+
+ max-width: 30rem;
+ font-weight: 600;
+}
+.hero-area--img{
+    max-width: 30rem;
+    @include mix.responsive(xs)
+    {
+         margin-top:1rem;
+          width:100%;
+         height:auto;
+            
+    }
+    @include mix.responsive(sd)
+    {
+         margin-top:1rem;
+          width:100%;
+         height:auto;
+            
+    }
+    img{
+        @include mix.responsive(xs)
+        {
+            
+            padding: 0rem 1rem;
+            
+             }
+            @include mix.responsive(sd)
+         {
+            width:25rem;
+            margin-top:1rem;
+            padding: 0rem 2rem;
+        }
+             
+        @include mix.responsive(lg)
+        {
+           max-width:40rem;
+        }
+        @include mix.responsive(xlg)
+        {
+          width:35rem;
+        }
+    }
+    
+}
+.hero-area--para{
+
+    margin-top:2rem;
+    color: grey;
+    line-height: 1.8;
+
+    @include mix.responsive(xs)
+    {
+        
+        font-size:0.8rem;
+        
+        width:21rem;
+        
+        padding:0rem 2rem;
+    }
+    @include mix.responsive(sd)
+    {
+        font-size:0.9rem;
+        width:22rem;
+        line-height: 2;
+    }
+    @include mix.responsive(xlg)
+    {
+        font-size:1.2rem;
+        width:26rem;
+    }
+}
+
+   //hero-AREA BUTTONS
+.button-2{
+    background-color:getcolor("main-color");
+    color:cornsilk;
+    border: 1px solid;
+    padding:0.6rem 1rem;
+    &:hover{
+        background-color:getcolor("hover-color");
+    }
+    @include mix.responsive(xs)
+    {
+        margin:0.5rem;
+    }
+    @include mix.responsive(xlg)
+    {
+       font-size:1.2rem;
+    }
+
+
+}
+.button-3{
+    color:getcolor("hover-color");
+    background-color: cornsilk;
+    border:1px solid;
+    margin-left:0.8em;
+
+    &:hover{
+        background-color:getcolor("hover-color");
+        color:#fff;
+        
+    }
+    @include mix.responsive(xlg)
+    {
+      font-size: 1.2rem;
+      
+    }
+}
+.hero-area--title{
+    font-size:2.5rem;
+    font-weight:600;
+    @include mix.responsive(xs)
+    {
+        font-size:1.5rem;
+        padding:0rem 2rem;
+    }
+    @include mix.responsive(sd)
+    {
+        max-width: 21rem;
+        font-size:1.7rem;
+        font-weight: 600;
+    }
+    @include mix.responsive(xlg)
+        {
+           font-size:2.5rem;
+           max-width:26rem;
+        }
+
+}
+
+.hero-area-btn{
+    margin-top:1rem;
+
+    @include mix.responsive(xs)
+    {
+        margin:0;
+    }
+    @include mix.responsive(xs)
+    {
+        padding:1rem;
+    }
+    
+    
+}

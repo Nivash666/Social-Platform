@@ -1,0 +1,26 @@
+@use "../abstract/mixin" as mix;
+#logo{
+    transition: 500ms;
+    animation: colorchange 10s infinite;
+
+}
+.line{
+    background:linear-gradient(to right,#e24997,#2d2ed4);
+    width: 6rem;
+    height:0.5rem;
+    border-radius:5px;
+    margin:30px auto;
+    @include mix.responsive(xs){
+        
+        
+    }
+
+}
+.img-responsive{
+    width:100%;
+    height:auto;
+    
+}
+.hidden{
+    display:none;
+}
